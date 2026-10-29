@@ -1,0 +1,50 @@
+Table amenities {
+   id int [pk, increment]
+   amenity varchar(100) [not null]
+}
+
+Table rooms {
+  id int [pk, increment]
+  room_no varchar(10) [not null]
+  floor varchar(10) [not null]
+  price decimal(8, 2) [not null]
+  status enum('Available', 'Rented') 
+}
+
+Table room_amenities {
+   id int [pk, increment]
+   amenity_id int [ref: > amenities.id]
+   room_id int [ref: > rooms.id]
+}
+
+Table renter {
+   id int [pk, increment]
+   fname varchar(50) [not null]
+   mname varchar(50) [null]
+   lname varchar(50) [not null]
+   suffix varchar(50) [null]
+   phone_no varchar(15) [not null]
+}
+
+Table rent {
+  id int [pk, increment]
+  renter_id int [ref: > renter.id]
+  rent_date date [default: `now()`]
+  rent_end date [not null]
+}
+
+Table rent_details {
+   id int [pk, increment]
+   rent_id int [ref: > rent.id]
+   room_id int [ref: > rooms.id]
+   price_at_rent decimal(8, 2) [not null]
+}
+
+Table rating_info {
+  id int [pk, increment]
+  renter_id int [unique, ref: > renter.id]
+  room_id int [unique, ref: > rooms.id]
+  rating tinyint [not null]
+  descript text [null]
+  rating_date date [default: `now()`]
+}
