@@ -23,10 +23,13 @@ Rating_Info = [rating value, description, rating_date]
 8.) A Room can be rated by multiple Renters.
 9.) Rating_info breaks the many-to-many relationship between Renter and Room (for ratings).
 
+##ERD Table 
+Logical Design/ERD.png
+
 ## Features 
 1.) Stored Procedure with a transaction inside
 
 ## How to run 
-1.) Import either implementation.sql or schema.dbml in your corresponding database application program
-2.) Import the seeding.sql to populate the Database
-3.) Try the sample queries provided
+1.) Import either implementation.sql or schema.dbml in your corresponding database application program.<br>
+2.) Import the seeding.sql to populate the Database.<br>
+3.) Try the sample queries provided.<br>
