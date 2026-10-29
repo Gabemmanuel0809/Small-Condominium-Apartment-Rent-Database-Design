@@ -23,8 +23,8 @@ Rating_Info = [rating value, description, rating_date]
 8.) A Room can be rated by multiple Renters.
 9.) Rating_info breaks the many-to-many relationship between Renter and Room (for ratings).
 
-##ERD Table 
-Logical Design/ERD.png
+## ERD Table 
+![ERD Diagram](Logical%20Design/ERD.png)
 
 ## Features 
 1.) Stored Procedure with a transaction inside
